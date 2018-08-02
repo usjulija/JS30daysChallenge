@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great|Monoton');
+
+body {
+  background: url("https://static.pexels.com/photos/221433/pexels-photo-221433.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  font-size: 30px;
+}
+
+p, h2, .keys {
+  color: white;
+  left: 50%;
+  margin-right: -50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+p {
+  bottom: 18%;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 1em;
+}
+
+h2 {
+  bottom: 8%;
+  font-family: 'Amatic SC', cursive;
+}
+
+kbd {
+  font-family: 'Monoton', cursive;
+  font-size: 1em;
+  margin: 10px;
+  padding: 10px;
+}
+
+.keys {
+  bottom: 8%;
+  display: flex;
+  flex-direction: row;
+}
+
+.key {
+  transition: all 0.07s;
+}
+
+.playing {
+  transform: scale(1.1);
+  text-shadow: -4px 6px 10px #B5FFF8;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 20px;
+  }
+}
