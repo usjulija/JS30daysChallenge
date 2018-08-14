@@ -9,3 +9,4 @@ Course designed by Wes Bos, contains solutions to the small tasks. Goal - accomp
   - [SVG Clock (Day 2)](https://codepen.io/Julli/pen/qKZedW)
   - [Motivational quotes (Day 5)](https://codepen.io/Julli/pen/gjWaJO)
   - [HTML5 Canvas (Day 8)](https://codepen.io/Julli/pen/BPqgNw)
+  - [HTML5 Video Player (Day 11)](https://codepen.io/Julli/pen/yqrdeO)
