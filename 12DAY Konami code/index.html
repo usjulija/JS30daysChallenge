@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Konami Code</title>
+</head>
+<body>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: orange;
+  font-family: 'helvetica neue', sans-serif;
+  padding: 15px;
+}
+
+img {
+  position: absolute;
+  overflow: hidden;
+}
+
+img:hover {
+	animation-name: tossing;
+	-webkit-animation-name: tossing;
+
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes tossing {
+	0% {
+		transform: rotate(-4deg);
+	}
+	50% {
+		transform: rotate(4deg);
+	}
+	100% {
+		transform: rotate(-4deg);
+	}
+}
+
+@-webkit-keyframes tossing {
+	0% {
+		-webkit-transform: rotate(-4deg);
+	}
+	50% {
+		-webkit-transform: rotate(4deg);
+	}
+	100% {
+		-webkit-transform: rotate(-4deg);
+	}
+}
+
+.fadeIn{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+	}
+	80% {
+		-webkit-transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+</style>
+<main id="catImage">
+  <h1>Do you like cats? Then type "meow" on your keyboard!</h1>
+</main>
+<script>
+const pressed = [];
+const secretCode = 'meow';
+window.addEventListener('keyup', (e) => {
+  console.log(e.key);
+  pressed.push(e.key);
+  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+  if(pressed.join('').includes(secretCode)){
+    console.log('yay!');
+    getRandomImage();
+  }
+  console.log(pressed);
+});
+
+const catsArray = [
+  'https://image.flaticon.com/icons/svg/763/763690.svg',
+  'https://image.flaticon.com/icons/svg/763/763738.svg',
+  'https://image.flaticon.com/icons/svg/763/763704.svg',
+  'https://image.flaticon.com/icons/svg/763/763707.svg',
+  'https://image.flaticon.com/icons/svg/763/763724.svg',
+  'https://image.flaticon.com/icons/svg/763/763699.svg',
+  'https://image.flaticon.com/icons/svg/763/763723.svg',
+  'https://image.flaticon.com/icons/svg/763/763695.svg',
+  'https://image.flaticon.com/icons/svg/763/763712.svg',
+  'https://image.flaticon.com/icons/svg/763/763736.svg',
+  'https://image.flaticon.com/icons/svg/763/763706.svg',
+  'https://image.flaticon.com/icons/svg/763/763722.svg',
+  'https://image.flaticon.com/icons/svg/763/763696.svg',
+  'https://image.flaticon.com/icons/svg/763/763693.svg',
+  'https://image.flaticon.com/icons/svg/763/763721.svg',
+  'https://image.flaticon.com/icons/svg/763/763714.svg',
+  'https://image.flaticon.com/icons/svg/763/763717.svg',
+  'https://image.flaticon.com/icons/svg/763/763698.svg',
+  'https://image.flaticon.com/icons/svg/763/763697.svg',
+  'https://image.flaticon.com/icons/svg/763/763705.svg'
+];
+
+function getRandomImage() {
+ //random number based on the array length
+ const randomiser = Math.floor(Math.random() *catsArray.length);
+
+ //create image element
+ const catImageApp = document.getElementById("catImage");
+ const image = document.createElement('img');
+
+ //add fade in animation
+ image.classList.add('fadeIn');
+
+ //remove fade in class animation after 3 seconds
+ setTimeout(function(){ image.classList.remove('fadeIn'); }, 2000);
+
+ //choose a randome image from the array
+ image.src = catsArray[randomiser];
+ image.alt = "cat";
+
+ //choose a randome width for the image
+ const width = Math.round( Math.random() * (450 - 50) + 50);
+ console.log(width);
+ image.style.width = width + 'px';
+
+//choose a randim place for an image
+ image.style.top = Math.round( Math.random() * (catImageApp.offsetHeight - width) )  + 'px';
+ image.style.left = Math.round(  Math.random() * (catImageApp.offsetWidth - width) ) + 'px';
+
+//append image to the catImage app
+ catImageApp.append(image);
+}
+
+
+  </script>
+</body>
+</html>
