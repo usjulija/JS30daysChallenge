@@ -11,3 +11,4 @@ Course designed by Wes Bos, contains solutions to the small tasks. Goal - accomp
   - [HTML5 Canvas (Day 8)](https://codepen.io/Julli/pen/BPqgNw)
   - [HTML5 Video Player (Day 11)](https://codepen.io/Julli/pen/yqrdeO)
   - [Fun Cats Finder (Day 12)](https://codepen.io/Julli/pen/KBLKvM)
+  - [Local Storage for Taco Menu (Day 15)](https://codepen.io/Julli/pen/KBLKvM)
