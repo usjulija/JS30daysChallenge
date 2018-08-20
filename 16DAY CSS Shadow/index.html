@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Shadow</title>
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+</head>
+<body>
+
+  <div class="hero">
+    <h1 contenteditable>CSS <span class="cursive">Magic</span></h1>
+  </div>
+  <div class="space">
+    <div class="stars back"></div>
+    <div class="stars middle"></div>
+    <div class="stars front"></div>
+  </div>
+
+  <style>
+  html {
+    color:black;
+    font-family: sans-serif;
+  }
+  body {
+    margin: 0;
+  }
+
+  .space,
+  .stars {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+
+  .space {
+    background-color:#060013;
+  }
+
+/* background pattern ref http://lea.verou.me/css3patterns/#starry-night */
+  .back {
+    background-image:
+    radial-gradient(#7CC2EE, rgba(124, 194, 238,0.2) 2px, transparent 40px), */
+    radial-gradient(#7CC2EE, rgba(124, 194, 238,0.1) 2px, transparent 40px),
+    radial-gradient(rgba(124, 194, 238,0.4), rgba(124, 194, 238,0.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    animation-name: starMove;
+    animation-duration: 150s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .middle {
+    background-image:
+    radial-gradient(#B9D4E9, rgba(255,255,255,.2) 5px, transparent 50px),
+    radial-gradient(#B9D4E9, rgba(255,255,255,.15) 6px, transparent 60px),
+    radial-gradient(#B9D4E9, rgba(255,255,255,.1) 7px, transparent 80px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 0px 60px, 10px 270px, 170px 50px;
+    animation-name: starMove;
+    animation-duration: 350s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .front {
+    background-image:
+    radial-gradient(#9A99C4, rgba(255,255,255,.2) 4px, transparent 30px),
+    radial-gradient(#9A99C4, rgba(255,255,255,.15) 3px, transparent 30px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 3px, transparent 40px);
+    background-size: 300px 300px, 200px 200px, 250px 250px, 150px 150px;
+    background-position: -100px -100px, 25px 160px, 300px 700px, 170px 50px;
+    animation-name: starMoveOther;
+    animation-duration: 250s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes starMoveOther {
+    from {background-position: 1300% 600%;}
+  	to {background-position: 5% 5%;}
+}
+
+  @-webkit-keyframes starMoveOther {
+    from {background-position: 1300% 600%;}
+  	to {background-position: 5% 5%;}
+}
+
+  @keyframes starMove {
+    from {background-position: 1300% 1300%;}
+  	to {background-position: 5% 5%;}
+}
+
+  @-webkit-keyframes starMove {
+    from {background-position: 1300% 1300%;}
+  	to {background-position: 5% 5%;}
+}
+
+  .hero {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    z-index: 10;
+  }
+  h1 {
+    text-shadow: 10px 10px 10px rgba(255,45,149,1);
+    font-size: 10vw;
+    font-weight: normal;
+  }
+
+  .cursive {
+    font-family: 'Great Vibes', cursive;
+  }
+  </style>
+
+<script>
+const hero = document.querySelector('.hero');
+const text = document.querySelector('h1');
+const walk = 50;
+
+function shadow(e) {
+  // const width = hero.offsetWidth;
+  // const height = hero.offsetHeight;
+  const { offsetWidth: width, offsetHeight: height } = hero;
+  let { offsetX: x, offsetY: y } = e;
+
+  if(this!== e.target) {
+    x = x + e.target.offsetLeft;
+    y = y + e.target.offsetTop;
+  }
+
+  const xWalk = Math.round((x / width * walk) - (walk / 2));
+  const yWalk = Math.round((y / height * walk) - (walk / 2));
+  console.log(xWalk,yWalk);
+
+  text.style.textShadow = `
+  ${xWalk}px ${yWalk}px 20px rgba(255,45,149,1),
+  ${xWalk}px ${yWalk * -1}px 40px rgba(124,194,238,0.5)
+  `;
+}
+
+hero.addEventListener('mousemove', shadow);
+</script>
+</body>
+</html>
