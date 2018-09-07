@@ -13,3 +13,4 @@ Course designed by Wes Bos, contains solutions to the small tasks. Goal - accomp
   - [Fun Cats Finder (Day 12)](https://codepen.io/Julli/pen/KBLKvM)
   - [Local Storage for Taco Menu (Day 15)](https://codepen.io/Julli/pen/gjJZdw)
   - [CSS Moving shadow and stars (Day 16)](https://codepen.io/Julli/pen/pOoRaG)
+  - [Drag and Scroll (Day 26)](https://codepen.io/Julli/pen/gdXGrW)
