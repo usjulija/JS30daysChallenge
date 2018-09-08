@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catch the Bunny!</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Catch the Bunny! <span class="score">0</span></h1>
+  <div class="time-best-score">
+    <button onClick="startGame()" class="start">Start!</button>
+    <p>Time left: <span class="time">10<span></p>
+    <p>🥕Best score: <span class="bestScore">0</span></p>
+  </div>
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+
+<script>
+
+  const holes = document.querySelectorAll('.hole');
+  const scoreBoard = document.querySelector('.score');
+  const bestScoreBoard = document.querySelector('.bestScore');
+  const timeDisplay = document.querySelector('.time');
+  const moles = document.querySelectorAll('.mole');
+  let lastHole;
+  let start = document.querySelector('.start');
+  let timeUp = false;
+  let score = 0;
+  let bestScore = parseInt(localStorage.getItem('bestScore')) || 0;
+  bestScoreBoard.textContent = bestScore
+  let countDown;
+
+  function timer() {
+    clearInterval(countDown);
+    let time = 10;
+    timeDisplay.textContent = time;
+    countDown = setInterval(() => {
+      if(time <= 0) {
+        clearInterval(countDown);
+        return;
+      }
+      time--;
+      timeDisplay.textContent = time;
+    }, 1000);
+  }
+
+  function randomTime(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+
+  function randomHole(holes) {
+    const idx = Math.floor(Math.random() * holes.length);
+    const hole = holes[idx];
+    if(hole === lastHole) {
+
+      return randomHole(holes);
+    }
+    randomeMole(hole.firstElementChild);
+    lastHole = hole;
+    return hole;
+  }
+
+  function randomeMole(mole) {
+    const randomiserBunny = Math.floor(Math.random() * 3);
+    mole.style.background = `url(images/bunny-${randomiserBunny}.svg) bottom center no-repeat`;
+  }
+
+  function peep(){
+    const time = randomTime(300, 1000);
+    const hole = randomHole(holes);
+    hole.classList.add('up');
+    setTimeout(() => {
+      hole.classList.remove('up');
+      if(!timeUp) peep();
+    }, time);
+  }
+
+  function startGame() {
+    scoreBoard.textContent = 0;
+    timeUp = false;
+    score = 0;
+    peep();
+    timer();
+    start.classList.add('hidden');
+    setTimeout(() => {
+      timeUp = true;
+      start.classList.remove('hidden');
+    }, 10000);
+  }
+
+  function bonk(e) {
+    if(!e.isTrusted) return; //no cheating
+    score++;
+
+    if(score >= bestScore) {
+      bestScore = score;
+      localStorage.setItem('bestScore', bestScore);
+    }
+    this.classList.remove('up');
+    scoreBoard.textContent = score;
+    bestScoreBoard.textContent = bestScore;
+  }
+
+  moles.forEach(mole => mole.addEventListener('click', bonk));
+
+  function randomGrass() {
+    holes.forEach(hole => {
+      const randomiserGrass = Math.floor(Math.random() * 3);
+      const grass = document.createElement('div');
+      grass.classList.add('grass');
+      grass.style.background = `url(images/grass-${randomiserGrass}.svg) top center no-repeat`;
+      hole.appendChild(grass);
+    });
+  }
+
+  randomGrass();
+
+</script>
+</body>
+</html>
