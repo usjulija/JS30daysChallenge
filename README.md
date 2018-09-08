@@ -1,16 +1,15 @@
-# 30 days Java Script challenge
-Course designed by Wes Bos, contains solutions to the small tasks. Goal - accomplish one task a day for 30days. This repository contains my solutions to the asks.
+# JavaScript30
+30 Day Vanilla JS Coding Challenge, based on the awesome course designed by Wes Bos [JavaScript30](https://javascript30.com/)!
 
+- Build 30 things in 30 days with 30 tutorials.
+- NO frameworks, NO compilers, NO libraries, NO boilerplate.
+
+**View the showcase here.**
+
+## Acknowledgments
 [Starter repository](https://github.com/wesbos/JavaScript30)
-
-# Solutions examples
-
-  - [Sounds of the ocean (Day 1)](https://codepen.io/Julli/full/bLVjVB/)
-  - [SVG Clock (Day 2)](https://codepen.io/Julli/pen/qKZedW)
-  - [Motivational quotes (Day 5)](https://codepen.io/Julli/pen/gjWaJO)
-  - [HTML5 Canvas (Day 8)](https://codepen.io/Julli/pen/BPqgNw)
-  - [HTML5 Video Player (Day 11)](https://codepen.io/Julli/pen/yqrdeO)
-  - [Fun Cats Finder (Day 12)](https://codepen.io/Julli/pen/KBLKvM)
-  - [Local Storage for Taco Menu (Day 15)](https://codepen.io/Julli/pen/gjJZdw)
-  - [CSS Moving shadow and stars (Day 16)](https://codepen.io/Julli/pen/pOoRaG)
-  - [Drag and Scroll (Day 26)](https://codepen.io/Julli/pen/gdXGrW)
+[Sound effects for day 1](http://www.wavsource.com/)
+[Awesome photos](https://unsplash.com/)
+[More awesome photos](https://www.pexels.com/popular-photos)
+[Vector visuals](https://www.freepik.com/)
+[Icons](https://www.flaticon.com/)
