@@ -30,6 +30,10 @@ a {
   border-radius: 20px;
 }
 
+a:focus {
+  background: white;
+}
+
 .highlight {
   transition: all 0.2s;
   border-bottom:2px solid white;

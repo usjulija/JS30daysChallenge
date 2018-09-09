@@ -30,7 +30,7 @@ body {
 header {
   text-align: center;
   height:50vh;
-  background:url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
+  background:url(images/road-one.jpg) top center no-repeat;
   background-size:cover;
   display:flex;
   align-items:center;
@@ -96,4 +96,15 @@ nav a {
   color:white;
   transition:all 0.2s;
   text-transform: uppercase;
+}
+
+.parallax {
+  width: 100%;
+  height: 350px;
+  background:url(images/road-two.jpg) bottom center no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.one {
 }

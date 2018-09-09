@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Follow Along Nav</title>
+  <link rel="icon" href="https://image.ibb.co/gomGeT/logo.png" type="image/png" sizes="16x16">
 </head>
 <body>
-  <h2>Cool</h2>
+  <h2>Sherlock Holmes</h2>
   <nav class="top">
     <div class="dropdownBackground">
       <span class="arrow"></span>
@@ -13,62 +14,62 @@
 
     <ul class="cool">
       <li>
-        <a href="#">About Me</a>
+        <a href="#">About</a>
         <div class="dropdown dropdown1">
           <div class="bio">
-            <img src="https://image.flaticon.com/icons/svg/616/616596.svg">
-            <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
+            <img src="https://image.flaticon.com/icons/svg/816/816553.svg" alt="icon sherlock">
+            <p>Sherlock Holmes is a fictional private detective created by British author Sir Arthur Conan Doyle. Referring to himself as a "consulting detective" in the stories, Holmes is known for his proficiency with observation, forensic science, and logical reasoning that borders on the fantastic, which he employs when investigating cases for a wide variety of clients, including Scotland Yard.</p>
           </div>
         </div>
       </li>
       <li>
-        <a href="#">Courses</a>
+        <a href="#">Adventures</a>
         <ul class="dropdown courses">
           <li>
-            <span class="code">RFB</span>
-            <a href="https://ReactForBeginners.com">React For Beginners</a>
+            <span class="code">Novel</span>
+            <a href="https://en.wikipedia.org/wiki/A_Study_in_Scarlet">A Study in Scarlet</a>
           </li>
           <li>
-            <span class="code">ES6</span>
-            <a href="https://ES6.io">ES6 For Everyone</a>
+            <span class="code">Novel</span>
+            <a href="https://en.wikipedia.org/wiki/The_Sign_of_the_Four">The Sign of the Four</a>
           </li>
           <li>
-            <span class="code">NODE</span>
-            <a href="https://LearnNode.com">Learn Node</a>
+            <span class="code">Novel</span>
+            <a href="https://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles">The Hound of the Baskervilles</a>
           </li>
           <li>
-            <span class="code">STPU</span>
-            <a href="https://SublimeTextBook.com">Sublime Text Power User</a>
+            <span class="code">Novel</span>
+            <a href="https://en.wikipedia.org/wiki/The_Valley_of_Fear">The Valley of Fear</a>
           </li>
           <li>
-            <span class="code">WTF</span>
-            <a href="http://Flexbox.io">What The Flexbox?!</a>
+            <span class="code">Stories</span>
+            <a href="https://en.wikipedia.org/wiki/The_Adventures_of_Sherlock_Holmes">The Adventures of Sherlock Holmes</a>
           </li>
           <li>
-            <span class="code">GRID</span>
-            <a href="https://CSSGrid.io">CSS Grid</a>
+            <span class="code">Stories</span>
+            <a href="https://en.wikipedia.org/wiki/The_Memoirs_of_Sherlock_Holmes">The Memoirs of Sherlock Holmes</a>
           </li>
           <li>
-            <span class="code">LRX</span>
-            <a href="http://LearnRedux.com">Learn Redux</a>
+            <span class="code">Stories</span>
+            <a href="https://en.wikipedia.org/wiki/His_Last_Bow">His Last Bow</a>
           </li>
           <li>
-            <span class="code">CLPU</span>
-            <a href="http://CommandLinePowerUser.com">Command Line Power User</a>
+            <span class="code">Stories</span>
+            <a href="https://en.wikipedia.org/wiki/The_Return_of_Sherlock_Holmes">The Return of Sherlock Holmes</a>
           </li>
           <li>
-            <span class="code">MMD</span>
-            <a href="http://MasteringMarkdown.com">Mastering Markdown</a>
+            <span class="code">Stories</span>
+            <a href="https://en.wikipedia.org/wiki/The_Case-Book_of_Sherlock_Holmes">The Case-Book of Sherlock Holmes</a>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#">Other Links</a>
+        <a href="#">Characters</a>
         <ul class="dropdown dropdown3">
-          <li><a class="button" href="http://twitter.com/wesbos">Twitter</a></li>
-          <li><a class="button" href="http://facebook.com/wesbos.developer">Facebook</a></li>
-          <li><a class="button" href="http://wesbos.com">Blog</a></li>
-          <li><a class="button" href="http://wesbos.com/courses">Course Catalog</a></li>
+          <li><a class="button" href="https://en.wikipedia.org/wiki/Sherlock_Holmes">Sherlock Holmes</a></li>
+          <li><a class="button" href="https://en.wikipedia.org/wiki/Mycroft_Holmes">Mycroft Holmes</a></li>
+          <li><a class="button" href="https://en.wikipedia.org/wiki/Dr._Watson">Dr. Watson</a></li>
+          <li><a class="button" href="https://en.wikipedia.org/wiki/Professor_Moriarty">Professor Moriarty</a></li>
         </ul>
       </li>
     </ul>
@@ -85,22 +86,23 @@
   body {
     margin: 0;
     min-height: 100vh;
-    background:
-      linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
-      linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
-      linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
-      linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+    background: linear-gradient(135deg, #fcfff4 0%,#dfe5d7 40%,#b3bead 100%);
   }
   h2 {
     margin-top: 0;
-    padding-top: .8em;
+    padding: 0.8em 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: maroon;
+    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
   }
   nav {
     position: relative;
     perspective: 600px;
   }
   .cool > li > a {
-    color: yellow;
+    color: saddleBrown;
     text-decoration: none;
     font-size: 20px;
     background: rgba(0,0,0,0.2);
@@ -175,7 +177,7 @@
     margin-right:20px;
   }
   .courses {
-    min-width:300px;
+    min-width:380px;
   }
   .courses li {
     padding: 10px 0;
@@ -193,10 +195,14 @@
     color:white;
     margin-bottom: 10px;
   }
-  /* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
-  .button[href*=twitter] { background: #019FE9; }
-  .button[href*=facebook] { background: #3B5998; }
-  .button[href*=courses] { background: #ffc600; }
+
+  .button {
+    width: 160px;
+  }
+
+  .button[href*=Sherlock] { background: brown; }
+  .button[href*=Mycroft] { background: #3B5998; }
+  .button[href*=Watson] { background: maroon; }
 </style>
 
 <script>
