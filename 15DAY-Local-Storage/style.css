@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: linear-gradient(135deg, #ffaf4b 0%,#ff920a 100%);
+  background: url(groceries.jpg) center center;
   background-size:cover;
   min-height:100vh;
   display:flex;
@@ -16,8 +16,8 @@ svg {
   background: rgba(0,0,0,0.1);
   padding: 20px;
   border-radius: 50%;
-  width:200px;
-  margin-bottom: 50px;
+  width:150px;
+  margin-bottom: 30px;
 }
 
 .wrapper {
@@ -63,7 +63,7 @@ h2 {
 }
 
 .plates input:checked + label:before {
-  content: '🌮';
+  content: '🍓';
 }
 
 .add-items {

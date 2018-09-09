@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://image.ibb.co/gomGeT/logo.png" type="image/png" sizes="16x16">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="-6 0 70 60">
+     <g fill="#FFF">
+       <path d="M36.27 25.3a1 1 0 0 0 1.27-.62 1.76 1.76 0 0 1 2.23-1.1c1.96.67 4.1-.39 4.77-2.35a1 1 0 1 0-1.9-.64 1.76 1.76 0 0 1-2.23 1.1 3.77 3.77 0 0 0-4.76 2.35 1 1 0 0 0 .62 1.27zM38.64 18.34a1 1 0 0 0 1.27-.63 1.75 1.75 0 0 1 2.23-1.1c1.96.67 4.1-.38 4.77-2.35a1 1 0 0 0-1.9-.64 1.76 1.76 0 0 1-2.23 1.1 3.73 3.73 0 0 0-4.77 2.35 1 1 0 0 0 .63 1.27zM41 11.37a1 1 0 0 0 1.27-.62 1.3 1.3 0 0 1 1.65-.82 3.29 3.29 0 0 0 4.19-2.06 1 1 0 1 0-1.9-.64 1.3 1.3 0 0 1-1.65.8 3.3 3.3 0 0 0-4.18 2.07 1 1 0 0 0 .62 1.27z"/>
+       <path d="M48.25 25.23a1.3 1.3 0 0 0-.57-.2A70.38 70.38 0 0 0 50.9 6.2c.05-1.9-.88-4.42-2.74-5.6-.9-.56-2.37-1.02-4.28-.04-2.98 1.54-5.12 6.08-6.83 9.72l-.3.62A5.8 5.8 0 0 0 33.6 6.9a4.77 4.77 0 0 0-3.7-3.7A3.45 3.45 0 0 0 26.95.46a3.4 3.4 0 0 0-2.12.45 3.68 3.68 0 0 0-5.35 2.38 4.5 4.5 0 0 0-3.31 4.28 5 5 0 0 0-3.41 6.66 3.93 3.93 0 0 0-.55 4.04c-1-1.09-2.4-1.98-3.99-1.92a1 1 0 0 0 .03 2h.1c.94 0 1.81.62 2.44 1.34-1.58.45-3.5 1.2-4.39 2.88a5.1 5.1 0 0 0-.24 3.69c-.17.29-.27.62-.25.98l1.7 24.19a5.7 5.7 0 0 0 5.7 5.4h28.07a5.7 5.7 0 0 0 5.69-5.39l1.74-25.02v-.02a1.3 1.3 0 0 0-.56-1.16zM37.58 13.77c.4-.74.83-1.66 1.28-2.63 1.5-3.2 3.57-7.56 5.95-8.8.87-.44 1.62-.45 2.3-.03 1.15.73 1.83 2.56 1.8 3.85a68.49 68.49 0 0 1-3.63 19.7l-1.7.76a3.16 3.16 0 0 1-1.7.5c-.56 0-1.1-.15-1.6-.44l-.71-.43a5.16 5.16 0 0 0-2.66-.74h-.03c-.93 0-1.87.24-2.7.74l-.7.43c-.4.24-.84.35-1.29.4l.08-.25a72.68 72.68 0 0 1 2.04-5.94l.38-.95a66.56 66.56 0 0 1 2.89-6.17zm-12.75 2.37l.34-.44c.08-.1.15-.22.2-.33.25-.46.31-.98.2-1.49l4.17-.91.1.37c.2.46.53.84 1 1.1.15.1.3.18.47.26l.4.22.2.1.35.22a6.12 6.12 0 0 1 .89.68 4.03 4.03 0 0 1 .7.9c-.43.94-.83 1.9-1.21 2.85l-.18.45c-1.1.28-2.16.8-3.47 1.73a5.89 5.89 0 0 1-4.9 1.19l-.6-2.78c-.41-1.88.48-3.02 1.34-4.12zm4.96-6.07a.41.41 0 0 1 .17.8l-5.52 1.21a.42.42 0 0 1-.5-.31.42.42 0 0 1 .32-.5l2.94-.64 2.6-.56zm-3.23 15.46l-.23.02c-.54.05-1.08.2-1.6.42l-.18-.87a7.73 7.73 0 0 0 5.6-1.62c.5-.37.96-.64 1.39-.87-.1.26-.19.52-.27.79l-.2.56c-.3.89-.57 1.79-.83 2.7l-.67-.4a5.16 5.16 0 0 0-2.66-.75h-.03l-.32.02zM14.6 15.2l.65-.54-.42-.73A3.01 3.01 0 0 1 17.3 9.4l1.21-.05-.28-1.18a2.46 2.46 0 0 1 2.22-3.05l.92-.07v-1c.03-.9.77-1.62 1.68-1.62.52 0 .9.24 1.12.44l.7.64.67-.67c.3-.3.73-.44 1.17-.4A1.44 1.44 0 0 1 27.94 4l-.12 1.12h1.13a2.75 2.75 0 0 1 2.74 2.56l.04.66.62.21a3.81 3.81 0 0 1 2.56 3.69c-.02.7-.24 1.38-.66 1.98-.67-.57-1.39-.95-2-1.27l-.46-.25c-.04-.02-.09-.06-.1-.17a.57.57 0 0 1 .13-.44c.44-.5.61-1.2.47-1.85l-.12-.55a2.12 2.12 0 0 0-2.54-1.63l-.27.06-2.94.65-2.86.62a2.12 2.12 0 0 0-1.63 2.54l.06.27.06.28c.14.66.6 1.23 1.24 1.5.15.06.28.19.33.32.02.07 0 .11-.05.2l-.31.41-.34.44-.12.16-.25.35-.13.2a8.5 8.5 0 0 0-.55 1.01l-.09.2c-.09.21-.17.44-.23.68l-.02.12c-.05.2-.09.42-.11.64l-.02.27-.02.35-.02-.01c0-.02-.02-.04-.04-.06a11.9 11.9 0 0 0-1.13-1.27l-.14-.14a6.92 6.92 0 0 0-.57-.45l-.16-.1a5.39 5.39 0 0 0-1.09-.57l-.15-.06c-.16-.05-.32-.09-.49-.12h-.06c-.03-.01-.06-.03-.1-.03-.11-.02-.22-.01-.34-.02l-.24-.02h-.07c-.16 0-.3.03-.46.04l-.22.03c-.2.04-.39.1-.58.15l-.09.03c-.5.17-.97.4-1.4.7a1.95 1.95 0 0 1 .58-2.22zm-6.43 8.3c.43-.8 1.45-1.4 3.24-1.91a5.4 5.4 0 0 0 2.23-1.28c.29-.28.55-.5.81-.72.8-.65 1.5-1 2.13-1.09h.04c.2-.03.4-.02.58.01l.15.04c.1.03.19.05.28.09l.18.08.26.13.2.15c.09.05.17.1.25.17l.23.2.23.21.25.28.2.23.3.37.18.24.33.49.14.22a7.6 7.6 0 0 1 1.14 5.7 3.1 3.1 0 0 1-1.24-.4l-.71-.45a5.16 5.16 0 0 0-2.66-.74h-.03c-.93 0-1.87.24-2.7.74l-.34.2c-.6.37-1.29.55-1.96.56-.68 0-1.36-.19-1.97-.55l-1.34-.81c-.18-.1-.37-.18-.57-.21-.15-.8-.1-1.44.17-1.95zm36.9 27.82a3.7 3.7 0 0 1-3.69 3.51H13.31a3.7 3.7 0 0 1-3.7-3.53L7.95 27.65l.87.52c.94.57 2 .85 3.06.84 1.05 0 2.11-.27 3.05-.84l.35-.2c.5-.3 1.04-.45 1.6-.45.55 0 1.1.15 1.6.45l.7.42c.9.55 1.93.78 2.94.72l.27-.01h.03c.69-.08 1.36-.3 1.98-.65.05-.02.12-.02.17-.06l.71-.42c.5-.3 1.05-.45 1.6-.45s1.1.15 1.6.45l.7.42c.76.46 1.6.7 2.45.73h.05c.3 0 .59 0 .88-.04.16-.02.33-.06.49-.1l.23-.06c.45-.12.88-.28 1.29-.53l.71-.42c.5-.3 1.04-.45 1.6-.45.55 0 1.1.15 1.6.44l.7.43c.83.5 1.76.74 2.68.74h.05c.9 0 1.8-.23 2.6-.7l1.97-.88c.04-.01.07-.05.1-.07l.16-.07-1.67 23.9z"/>
+       <path d="M11.91 43h7a1 1 0 1 0 0-2h-7a1 1 0 1 0 0 2zM11.91 47h9a1 1 0 1 0 0-2h-9a1 1 0 1 0 0 2zM22.91 49h-11a1 1 0 1 0 0 2h11a1 1 0 1 0 0-2zM28.91 49h-2a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2z"/>
+     </g>
+  </svg>
+  <div class="wrapper">
+    <h2>MY SHOPPING LIST</h2>
+    <p></p>
+    <ul class="plates">
+      <li>Loading items...</li>
+    </ul>
+    <form class="add-items">
+      <input type="text" name="item" placeholder="Item Name" required>
+      <input type="submit" value="+ Add Item">
+    </form>
+    <button id="checkAll">Check All</button>
+    <button id="uncheckAll">Uncheck All</button>
+    <button id="resetAll">Reset All</button>
+  </div>
+
+<script>
+  const addItems = document.querySelector('.add-items');
+  const itemsList = document.querySelector('.plates');
+  let items = JSON.parse(localStorage.getItem('items')) || [];
+  const checkAll = document.getElementById('checkAll');
+  const uncheckAll = document.getElementById('uncheckAll');
+  const resetAll = document.getElementById('resetAll');
+
+  function addItem(e) {
+    e.preventDefault(); // prevent page reloading
+    const text = (this.querySelector('[name=item]')).value; //grabs the value from input
+    const item = {
+      text, //i.e. text: text,
+      done: false
+    }
+
+    items.push(item);
+    populateList(items, itemsList);
+    localStorage.setItem('items', JSON.stringify(items));
+    this.reset(); //clears up the input
+  }
+
+  function populateList(plates = [], populateList) {
+    populateList.innerHTML = plates.map((plate, index) => {
+      return `
+        <li>
+          <input type="checkbox" data-index=${index} id="item${index}" ${plate.done ? 'checked' : ''}/>
+          <label for="item${index}">${plate.text}</label>
+        </li>
+      `;
+    }).join('');
+  }
+
+  function toggleDone(e) {
+    //event delegation
+    if(!e.target.matches('input')) return; //skip this unless it's an input
+    const element = e.target;
+    const index = element.dataset.index;
+    items[index].done = !items[index].done; //change the property to the opposite
+    localStorage.setItem('items', JSON.stringify(items)); //store it in the local storage
+    populateList(items, itemsList); //visually update the page
+  }
+
+  function checkAllItems() {
+    items.forEach(item => {
+      item.done = true;
+      localStorage.setItem('items', JSON.stringify(items)); //store it in the local storage
+      populateList(items, itemsList); //visually update the page
+    });
+  }
+
+  function uncheckAllItems() {
+    items.forEach(item => {
+      item.done = false;
+      localStorage.setItem('items', JSON.stringify(items)); //store it in the local storage
+      populateList(items, itemsList); //visually update the page
+    });
+  }
+
+  function resetAllItems() {
+    items = [];
+    localStorage.setItem('items', JSON.stringify(items)); //store it in the local storage
+    populateList(items, itemsList); //visually update the page
+  }
+
+  addItems.addEventListener('submit', addItem);
+  itemsList.addEventListener('click', toggleDone);
+  checkAll.addEventListener('click', checkAllItems);
+  uncheckAll.addEventListener('click', uncheckAllItems);
+  resetAll.addEventListener('click', resetAllItems);
+
+  populateList(items, itemsList);
+</script>
+
+
+</body>
+</html>
