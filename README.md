@@ -8,7 +8,7 @@
 
 ## Acknowledgments
 [Starter repository](https://github.com/wesbos/JavaScript30)
-[Sound effects for day 1](http://www.wavsource.com/)
+[Sound effects](http://www.wavsource.com/)
 [Awesome photos](https://unsplash.com/)
 [More awesome photos](https://www.pexels.com/popular-photos)
 [Vector visuals](https://www.freepik.com/)

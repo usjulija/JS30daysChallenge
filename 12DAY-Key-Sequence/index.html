@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://image.ibb.co/gomGeT/logo.png" type="image/png" sizes="16x16">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Konami Code</title>
 </head>
@@ -44,27 +45,15 @@ img:hover {
 }
 
 @keyframes tossing {
-	0% {
-		transform: rotate(-4deg);
-	}
-	50% {
-		transform: rotate(4deg);
-	}
-	100% {
-		transform: rotate(-4deg);
-	}
+	0% {transform: rotate(-4deg);}
+	50% {transform: rotate(4deg);}
+	100% {transform: rotate(-4deg);}
 }
 
 @-webkit-keyframes tossing {
-	0% {
-		-webkit-transform: rotate(-4deg);
-	}
-	50% {
-		-webkit-transform: rotate(4deg);
-	}
-	100% {
-		-webkit-transform: rotate(-4deg);
-	}
+	0% {-webkit-transform: rotate(-4deg);}
+	50% {-webkit-transform: rotate(4deg);}
+	100% {-webkit-transform: rotate(-4deg);}
 }
 
 .fadeIn{
@@ -115,11 +104,10 @@ img:hover {
 		opacity: 1;
 	}
 }
-
-
 </style>
 <main id="catImage">
-  <h1>Do you like cats? Then type "meow" on your keyboard!</h1>
+  <h1>Do you like cats? Type "meow"!</h1>
+  <audio src="audio/meow.wav"></audio>
 </main>
 <script>
 const pressed = [];
@@ -135,32 +123,9 @@ window.addEventListener('keyup', (e) => {
   console.log(pressed);
 });
 
-const catsArray = [
-  'https://image.flaticon.com/icons/svg/763/763690.svg',
-  'https://image.flaticon.com/icons/svg/763/763738.svg',
-  'https://image.flaticon.com/icons/svg/763/763704.svg',
-  'https://image.flaticon.com/icons/svg/763/763707.svg',
-  'https://image.flaticon.com/icons/svg/763/763724.svg',
-  'https://image.flaticon.com/icons/svg/763/763699.svg',
-  'https://image.flaticon.com/icons/svg/763/763723.svg',
-  'https://image.flaticon.com/icons/svg/763/763695.svg',
-  'https://image.flaticon.com/icons/svg/763/763712.svg',
-  'https://image.flaticon.com/icons/svg/763/763736.svg',
-  'https://image.flaticon.com/icons/svg/763/763706.svg',
-  'https://image.flaticon.com/icons/svg/763/763722.svg',
-  'https://image.flaticon.com/icons/svg/763/763696.svg',
-  'https://image.flaticon.com/icons/svg/763/763693.svg',
-  'https://image.flaticon.com/icons/svg/763/763721.svg',
-  'https://image.flaticon.com/icons/svg/763/763714.svg',
-  'https://image.flaticon.com/icons/svg/763/763717.svg',
-  'https://image.flaticon.com/icons/svg/763/763698.svg',
-  'https://image.flaticon.com/icons/svg/763/763697.svg',
-  'https://image.flaticon.com/icons/svg/763/763705.svg'
-];
-
 function getRandomImage() {
  //random number based on the array length
- const randomiser = Math.floor(Math.random() *catsArray.length);
+ const randomiser = Math.floor(Math.random() *50);
 
  //create image element
  const catImageApp = document.getElementById("catImage");
@@ -173,7 +138,7 @@ function getRandomImage() {
  setTimeout(function(){ image.classList.remove('fadeIn'); }, 2000);
 
  //choose a randome image from the array
- image.src = catsArray[randomiser];
+ image.src = `images/cat-(${randomiser}).svg`;
  image.alt = "cat";
 
  //choose a randome width for the image
@@ -187,6 +152,11 @@ function getRandomImage() {
 
 //append image to the catImage app
  catImageApp.append(image);
+
+ //play sound
+ const audio = document.querySelector(`audio`);
+ audio.currentTime = 0; //rewinds the function to the start
+ audio.play();
 }
 
 
