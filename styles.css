@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  background: #21212a;
+  font-size: 14px;
+  color: #251c26;
+}
+
+header {
+  background: url(images/back.gif) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 10vw;
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.3);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+}
+
+.portfolio-link {
+  position: relative;
+  align-self: flex-end;
+  transform:rotate(8deg);
+  transition: 0.2s ease;
+  background: #393750;
+  border-radius: 5px;
+  box-shadow: 3px 4px 2px rgba(0,0,0,0.1);
+  padding: 7px 12px;
+}
+
+.portfolio-link:hover {
+  transform:rotate(0deg);
+}
+
+.portfolio-link a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  margin: -5em 2em 5em 2em;
+  padding: 1em;
+  background: white;
+  border-radius: 10px;
+  box-shadow:0 0 5px 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main > * {
+  margin: 8px;
+}
+
+.bold {
+  font-weight: bold;
+  color: #6279a6;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+.app {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.app > * {
+ margin: 8px;
+}
+
+.card {
+  flex: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-position: top;
+  background-size: cover;
+  box-shadow: 3px 4px 2px rgba(0,0,0,0.1);
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 10;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  background: #6279a6;
+  padding: 15px;
+}
+
+.title:hover,
+.title:focus {
+  opacity: 1;
+}
+
+@media screen and (min-width: 450px) {
+  main {
+    padding: 2em;
+  }
+}
+@media screen and (min-width: 500px) {
+  .card {
+    flex: 45%;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  html {
+    font-size: 17px;
+  }
+  header h1 {
+    font-size: 8vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  header {
+    height: 65vh;
+  }
+  header h1 {
+    font-size: 65px;
+  }
+  main {
+    margin: -5em auto 5em auto;
+    max-width: 80vw;
+  }
+  .portfolio-link {
+    right: 10%;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  header {
+    height: 65vh;
+  }
+  .portfolio-link {
+    right: 25%;
+  }
+  .card {
+    flex: 22%;
+    height: 300px;
+  }
+}

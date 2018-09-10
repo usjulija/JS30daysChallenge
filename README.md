@@ -4,7 +4,7 @@
 - Build 30 things in 30 days with 30 tutorials.
 - NO frameworks, NO compilers, NO libraries, NO boilerplate.
 
-**View the showcase here.**
+**[View the showcase here.](https://usjulija.github.io/JS30daysChallenge/)**
 
 ## Acknowledgments
 [Starter repository](https://github.com/wesbos/JavaScript30)
