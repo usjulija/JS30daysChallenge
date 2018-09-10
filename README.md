@@ -7,9 +7,9 @@
 **[View the showcase here.](https://usjulija.github.io/JS30daysChallenge/)**
 
 ## Acknowledgments
-[Starter repository](https://github.com/wesbos/JavaScript30)
-[Sound effects](http://www.wavsource.com/)
-[Awesome photos](https://unsplash.com/)
-[More awesome photos](https://www.pexels.com/popular-photos)
-[Vector visuals](https://www.freepik.com/)
-[Icons](https://www.flaticon.com/)
+- [Starter repository](https://github.com/wesbos/JavaScript30)
+- [Sound effects](http://www.wavsource.com/)
+- [Awesome photos](https://unsplash.com/)
+- [More awesome photos](https://www.pexels.com/popular-photos)
+- [Vector visuals](https://www.freepik.com/)
+- [Icons](https://www.flaticon.com/)
