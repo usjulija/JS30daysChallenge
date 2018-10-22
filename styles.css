@@ -6,19 +6,36 @@
 
 html {
   font-family: 'Montserrat', sans-serif;
-  background: #21212a;
+  background: #ad1283;
   font-size: 14px;
   color: #251c26;
+  animation: changeColor 25s ease-in-out infinite both;
 }
 
 header {
-  background: url(images/back.gif) center center no-repeat;
-  background-size: cover;
   width: 100%;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes changeColor {
+  0% {
+    background: #ad1283;
+  }
+  25% {
+    background: #f5ab66;
+  }
+  50% {
+    background: #fe9090;
+  }
+  75% {
+    background: #f5ab66;
+  }
+  100% {
+    background: #ad1283;
+  }
 }
 
 header h1 {
